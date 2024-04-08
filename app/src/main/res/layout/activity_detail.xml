@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".detail.DetailActivity">
+
+    <ImageView
+        android:id="@+id/ivDetailAvatar"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars"
+        android:contentDescription="@string/image" />
+
+    <TextView
+        android:id="@+id/tvDetailName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/gray_primary"
+        android:fontFamily="@font/rubik"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivDetailAvatar"
+        tools:text="@tools:sample/full_names" />
+
+    <TextView
+        android:id="@+id/tvDetailUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:fontFamily="@font/rubik_bold"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDetailName"
+        tools:text="@tools:sample/full_names" />
+
+    <TextView
+        android:id="@+id/tvDetailUrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/gray_primary"
+        android:fontFamily="@font/rubik"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDetailUserName"
+        tools:text="@tools:sample/full_names" />
+
+    <TextView
+        android:id="@+id/tvDetailLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/gray_primary"
+        android:fontFamily="@font/rubik"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDetailUrl"
+        tools:text="@tools:sample/lorem"
+        app:drawableStartCompat="@drawable/ic_loc" />
+
+    <TextView
+        android:id="@+id/tvDetailRepo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textAlignment="center"
+        android:fontFamily="@font/rubik"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvDetailFollowing"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDetailLocation"
+        app:layout_constraintVertical_bias="0.0"
+        android:textSize="16sp"
+        tools:text="@string/detail_repository" />
+
+    <TextView
+        android:id="@+id/tvDetailFollowing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:fontFamily="@font/rubik"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDetailRepo"
+        app:layout_constraintEnd_toStartOf="@+id/tvDetailFollower"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvDetailRepo"
+        app:layout_constraintTop_toTopOf="@+id/tvDetailRepo"
+        app:layout_constraintVertical_bias="0.0"
+        android:textSize="16sp"
+        tools:text="@string/detail_following" />
+
+    <TextView
+        android:id="@+id/tvDetailFollower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:fontFamily="@font/rubik"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDetailFollowing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvDetailFollowing"
+        app:layout_constraintTop_toTopOf="@+id/tvDetailFollowing"
+        app:layout_constraintVertical_bias="0.0"
+        android:textSize="16sp"
+        tools:text="@string/detail_follower" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvDetailFollower" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabPage" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnFavorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_favorite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/white"
+        android:contentDescription="@string/favorite" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_share"
+        android:onClick="onShareClicked"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnFavorite"
+        app:tint="@color/white"
+        android:contentDescription="@string/share"
+        tools:ignore="OnClick,UsingOnClickInXml" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/ivDetailAvatar"
+        app:layout_constraintEnd_toEndOf="@id/ivDetailAvatar"
+        app:layout_constraintStart_toStartOf="@id/ivDetailAvatar"
+        app:layout_constraintTop_toTopOf="@id/ivDetailAvatar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

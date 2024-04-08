@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">GitHub Mobile</string>
+    <string name="detail">Detail Pengguna</string>
+    <string name="follower">Pengikut</string>
+    <string name="following">Mengikuti</string>
+    <string name="search">Masukkan nama pengguna …</string>
+    <string name="detail_repository">Repositori\n %d</string>
+    <string name="detail_following">Mengikuti\n %d</string>
+    <string name="detail_follower">Pengikut\n %d</string>
+    <string name="light_theme">Mode Terang</string>
+    <string name="dark_theme">Mode Gelap</string>
+    <string name="favorite">Favorit</string>
+    <string name="setting">Tema</string>
+    <string name="share">Share</string>
+    <string name="image">Image</string>
+    <string name="Author">Yondika Vio Landa</string>
+    <string name="location_not_set">Lokasi tidak diatur</string>
+</resources>
